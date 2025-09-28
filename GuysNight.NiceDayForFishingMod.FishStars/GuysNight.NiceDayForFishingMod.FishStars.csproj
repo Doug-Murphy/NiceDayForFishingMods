@@ -19,12 +19,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
         <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+        <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+      <Reference Include="PixelFishing">
+        <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\interop\PixelFishing.dll</HintPath>
+      </Reference>
     </ItemGroup>
     
-    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-        <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\plugins</OutputPath>
-    </PropertyGroup>
-
 </Project>
