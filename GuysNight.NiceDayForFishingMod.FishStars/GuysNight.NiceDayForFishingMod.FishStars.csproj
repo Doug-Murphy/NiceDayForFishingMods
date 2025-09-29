@@ -11,7 +11,7 @@
             https://nuget.samboy.dev/v3/index.json
         </RestoreAdditionalProjectSources>
     </PropertyGroup>
-    
+
     <PropertyGroup> <!-- PluginInfo settings -->
         <AssemblyName>$(MSBuildProjectName)</AssemblyName>
         <Product>Fish Stars Modifier</Product>
@@ -19,14 +19,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-        <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*"/>
+        <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile"/>
     </ItemGroup>
 
     <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-      <Reference Include="PixelFishing">
-        <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\interop\PixelFishing.dll</HintPath>
-      </Reference>
+        <Reference Include="PixelFishing">
+            <HintPath>C:\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\interop\PixelFishing.dll</HintPath>
+        </Reference>
+        <Reference Include="C:\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\unity-libs\UnityEngine.CoreModule.dll"/>
+
     </ItemGroup>
-    
+
 </Project>
