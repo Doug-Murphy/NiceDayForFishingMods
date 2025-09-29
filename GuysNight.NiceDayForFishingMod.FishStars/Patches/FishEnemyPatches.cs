@@ -12,7 +12,8 @@ public class FishEnemyPatches
     [HarmonyPostfix]
     public static void StartBattlePostfix(FishEnemy __instance, BattleManagerBase battleManager, Player player)
     {
-        __instance.TakeDamage(5_000_000, false, false);
+        SharedComponents.Logger.LogInfo($"StartBattlePostfix. __instance.EnemyData.EnemyName: {__instance.EnemyData.EnemyName}");
+        SharedComponents.Logger.LogInfo($"StartBattlePostfix. __instance.EnemyData.EnemyLevel: {__instance.EnemyData.EnemyLevel}");
     }
     
     [HarmonyPatch("EndBattle")]
