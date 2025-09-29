@@ -19,8 +19,8 @@ public class Plugin : BasePlugin
         SharedComponents.ConfigFile = new ConfigFile(Path.Combine(Paths.ConfigPath, $"{MyPluginInfo.PLUGIN_NAME}.cfg"), true) { SaveOnConfigSet = false };
         
         SharedComponents.ConfigFile.Bind(
-            "Feature Toggles",
-            "EnableMod",
+            Constants.ConfigSectionHeaderToggles,
+            Constants.ConfigKeyEnableMod,
             true,
             "Whether or not to enable this mod. True for enabling the mod. False for disabling."
         );
