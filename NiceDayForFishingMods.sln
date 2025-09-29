@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuysNight.NiceDayForFishingMod.FishStars", "GuysNight.NiceDayForFishingMod.FishStars\GuysNight.NiceDayForFishingMod.FishStars.csproj", "{DE1DF5DA-D65E-4564-92FE-D13B44578B01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuysNight.NiceDayForFishingMod.InstantWin", "GuysNight.NiceDayForFishingMod.InstantWin\GuysNight.NiceDayForFishingMod.InstantWin.csproj", "{48E8282A-8BC9-4E48-8555-D4C46C13797B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{DE1DF5DA-D65E-4564-92FE-D13B44578B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE1DF5DA-D65E-4564-92FE-D13B44578B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE1DF5DA-D65E-4564-92FE-D13B44578B01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E8282A-8BC9-4E48-8555-D4C46C13797B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E8282A-8BC9-4E48-8555-D4C46C13797B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E8282A-8BC9-4E48-8555-D4C46C13797B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E8282A-8BC9-4E48-8555-D4C46C13797B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
