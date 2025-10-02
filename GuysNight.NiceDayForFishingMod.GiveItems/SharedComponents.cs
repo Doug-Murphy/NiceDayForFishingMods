@@ -8,4 +8,3 @@ internal static class SharedComponents {
 
 	internal static ConfigFile ConfigFile { get; set; }
 }
-
