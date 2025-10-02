@@ -27,7 +27,10 @@
         <Reference Include="PixelFishing">
             <HintPath>C:\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\interop\PixelFishing.dll</HintPath>
         </Reference>
+
         <Reference Include="C:\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\unity-libs\UnityEngine.CoreModule.dll"/>
+        <Reference Include="C:\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\interop\Unity.InputSystem.dll"/>
+        <Reference Include="C:\Program Files (x86)\Steam\steamapps\common\nice day for fishing\BepInEx\interop\Il2Cppmscorlib.dll"/>
     </ItemGroup>
 
 </Project>
