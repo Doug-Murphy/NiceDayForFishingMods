@@ -161,6 +161,7 @@ internal static class Constants {
 			internal const string BaradunsSpareAmulet = "ItemEquipmentNecklace07_WizardsNecklace";
 			internal const string ClericCollar = "ItemEquipmentNecklace03_MinorHealNecklace";
 			internal const string CompanyProperty = "ItemEquipmentNecklace16_DLC1Necklace02";
+			internal const string DarkwoodJewel = "ItemEquipmentNecklace11_DamageSpellNecklace";
 			internal const string GildedAmuletOfRestitution = "ItemEquipmentNecklace09_HighPaladinNecklace";
 			internal const string IconicNecklace = "ItemEquipmentNecklace08_HeroNecklace";
 			internal const string KalaborsEnchantment = "ItemEquipmentNecklace10_HighWizardNecklace";
@@ -174,8 +175,7 @@ internal static class Constants {
 
 			//to be verified - I think these actually don't exist in the game.
 			internal const string None = "ItemEquipmentNecklace00_None";
-			internal const string DamageSpellNecklace = "ItemEquipmentNecklace11_DamageSpellNecklace";
-			internal const string BoostNecklace = "ItemEquipmentNecklace12_BoostNecklace";
+			internal const string BoostNecklace = "ItemEquipmentNecklace12_BoostNecklace"; //Overdrive Opal?
 		}
 
 		internal static class Rings {
