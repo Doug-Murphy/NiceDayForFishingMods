@@ -8,6 +8,8 @@ internal static class Constants {
 	internal const string ConfigKeyGiveHoneywoodItems = "Keybind for giving all building materials needed to fully level up Honeywood.";
 
 	internal static class ItemNames {
+		internal const string Gold = "ItemMoney";
+
 		internal static class Bait {
 			internal const string ArgonsMushroom = "ItemBait03_Mushrooms";
 			internal const string BoBoBerry = "ItemBait04_Berry";
