@@ -104,6 +104,17 @@ internal static class Constants {
 			
 			//to be verified
 		}
+
+		internal static class Lines {
+			//verified in-game names
+			internal const string AdventurerLine = "ItemEquipmentReel03_SilverReel";
+			internal const string DiamondLine3000 = "ItemEquipmentReel06_DiamondReel";
+			internal const string HoneywoodLine = "ItemEquipmentReel02_BronzeReel";
+			internal const string ObsidianLine = "ItemEquipmentReel05_ObsidianReel";
+			internal const string RopeLine = "ItemEquipmentReel04_GoldReel";
+			
+			//to be verified
+		}
 		
 		internal static class Necklaces
 		{
