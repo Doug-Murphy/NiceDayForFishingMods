@@ -18,6 +18,7 @@ internal static class Constants {
 		}
 
 		internal static class BuildingMaterials {
+			//verified in-game names
 			internal const string DriftWood = "ItemBuildingMaterial01";
 			internal const string Ectoplasm = "ItemBuildingMaterial08";
 			internal const string Fossil = "ItemBuildingMaterial07";
@@ -30,6 +31,8 @@ internal static class Constants {
 			internal const string Slime = "ItemBuildingMaterial04";
 			internal const string SoulGem = "ItemBuildingMaterial12";
 			internal const string Stone = "ItemBuildingMaterial02";
+			
+			//to be verified
 		}
 
 		internal static class Consumables {
