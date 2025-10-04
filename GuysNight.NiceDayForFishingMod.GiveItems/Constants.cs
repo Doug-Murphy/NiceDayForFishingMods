@@ -33,14 +33,17 @@ internal static class Constants {
 		}
 
 		internal static class Consumables {
+			//verified in-game names
+			internal const string CheeseWedge = "ItemConsumable06_StaminaFood";
 			internal const string HealthPotion = "ItemConsumable01_HealthPotion";
+			internal const string HealthyApple = "ItemConsumable07_HealthFood";
+			internal const string PeaceBloom = "ItemConsumable08_ImmuneFood"; 
 			internal const string StaminaPotion = "ItemConsumable02_StaminaPotion";
+			internal const string StoneSkinPotion = "ItemConsumable04_DefensePotion";
 			internal const string StrengthPotion = "ItemConsumable03_StrenghtPotion"; //intentional typo in internal ID
-			internal const string DefensePotion = "ItemConsumable04_DefensePotion";
-			internal const string EffectRemoveFood = "ItemConsumable05_EffectRemoveFood";
-			internal const string StaminaFood = "ItemConsumable06_StaminaFood";
-			internal const string HealthFood = "ItemConsumable07_HealthFood";
-			internal const string ImmuneFood = "ItemConsumable08_ImmuneFood";
+			internal const string TalonMushroom = "ItemConsumable05_EffectRemoveFood";
+			
+			//to be verified
 		}
 		
 		internal static class FishingRods
