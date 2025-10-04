@@ -105,6 +105,18 @@ internal static class Constants {
 			//to be verified
 		}
 
+		internal static class HookAddons {
+			//verified in-game names
+			internal const string AnglingBud2000 = "HookAddonWeakFin";
+			internal const string FishingPal5000 = "HookAddonFin";
+			internal const string GlimmerGarlic = "HookAddonHolyLight";
+			internal const string HolyGarlic = "HookAddonSuperHolyLight";
+			internal const string WeakLight = "HookAddonSimpleLight";
+			internal const string WiggleFin = "HookAddonWiggleFin";
+			
+			//to be verified
+		}
+
 		internal static class Lines {
 			//verified in-game names
 			internal const string AdventurerLine = "ItemEquipmentReel03_SilverReel";
