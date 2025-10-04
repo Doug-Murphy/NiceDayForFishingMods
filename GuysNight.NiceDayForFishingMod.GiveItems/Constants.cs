@@ -200,10 +200,15 @@ internal static class Constants {
 			internal const string Boss1Ring = "ItemEquipmentJewelery09_Boss1Ring";
 			internal const string Boss2Ring = "ItemEquipmentJewelery10_Boss2Ring";
 		}
-		
-		internal static class Sails
-		{
-			internal const string VLDL = "ItemEquipmentSail01_VLDL";
+
+		internal static class Sails {
+			//verified in-game names
+			internal const string BasicSail = "ItemEquipmentSail01_VLDL";
+			internal const string IconicSail = "ItemEquipmentSail14_DLC1Sail01";
+			internal const string ThatShitsDingoSail = "ItemEquipmentSail16_DLC1Sail03";
+			internal const string WormsSail = "ItemEquipmentSail15_DLC1Sail02";
+
+			//to be verified
 			internal const string Stripes = "ItemEquipmentSail02_Stripes";
 			internal const string Wave = "ItemEquipmentSail03_Wave";
 			internal const string Landscape = "ItemEquipmentSail04_Landscape";
@@ -216,14 +221,11 @@ internal static class Constants {
 			internal const string Garlic = "ItemEquipmentSail11_Garlic";
 			internal const string Sail12 = "ItemEquipmentSail12";
 			internal const string Sail13 = "ItemEquipmentSail13";
-			internal const string DLC1Sail01 = "ItemEquipmentSail14_DLC1Sail01"; //I think this is another VLDL one?
-			internal const string DLC1Sail02 = "ItemEquipmentSail15_DLC1Sail02"; //I think this is the worm one
-			internal const string DLC1Sail03 = "ItemEquipmentSail16_DLC1Sail03"; //I think this is Dingo
-			internal const string DLC1Sail04 = "ItemEquipmentSail17_DLC1Sail04"; //I think this is the rainbow mushroom one.
+			internal const string DLC1Sail04 = "ItemEquipmentSail17_DLC1Sail04"; //I think this is MCU sail
 		}
 	}
-	
-	
+
+
 	/*
 	 * Item Costs:
 	 * Undead Mines to Honeywood Portal -> 2 stone, 2 seashell, 1 obsidian
