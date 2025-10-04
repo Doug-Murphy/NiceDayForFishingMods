@@ -152,26 +152,28 @@ internal static class Constants {
 			
 			//to be verified
 		}
-		
-		internal static class Necklaces
-		{
+
+		internal static class Necklaces {
+			//verified in-game names
+			internal const string AmuletOfArno = "ItemEquipmentNecklace02_WarriorNecklace";
+			internal const string BaradunsSpareAmulet = "ItemEquipmentNecklace07_WizardsNecklace";
+			internal const string ClericCollar = "ItemEquipmentNecklace03_MinorHealNecklace";
+			internal const string CompanyProperty = "ItemEquipmentNecklace16_DLC1Necklace02";
+			internal const string GildedAmuletOfRestitution = "ItemEquipmentNecklace09_HighPaladinNecklace";
+			internal const string IconicNecklace = "ItemEquipmentNecklace08_HeroNecklace";
+			internal const string KalaborsEnchantment = "ItemEquipmentNecklace10_HighWizardNecklace";
+			internal const string LegendaryNecklace = "ItemEquipmentNecklace15_DLC1Necklace01";
+			internal const string LilShield = "ItemEquipmentNecklace04_ArmorNecklace";
+			internal const string MuscleCharm = "ItemEquipmentNecklace05_PowerNecklace";
+			internal const string NeckbandOfChanneling = "ItemEquipmentNecklace01_MinorDamageSpellNecklace";
+			internal const string PaladinsInsignia = "ItemEquipmentNecklace06_PaladinNecklace";
+			internal const string SylwynPendant = "ItemEquipmentNecklace13_DotNecklace";
+			internal const string TankOfCorrosion = "ItemEquipmentNecklace14_BigArmorNecklace";
+
+			//to be verified - I think these actually don't exist in the game.
 			internal const string None = "ItemEquipmentNecklace00_None";
-			internal const string MinorDamageSpellNecklace = "ItemEquipmentNecklace01_MinorDamageSpellNecklace";
-			internal const string WarriorNecklace = "ItemEquipmentNecklace02_WarriorNecklace";
-			internal const string MinorHealNecklace = "ItemEquipmentNecklace03_MinorHealNecklace";
-			internal const string ArmorNecklace = "ItemEquipmentNecklace04_ArmorNecklace";
-			internal const string PowerNecklace = "ItemEquipmentNecklace05_PowerNecklace";
-			internal const string PaladinNecklace = "ItemEquipmentNecklace06_PaladinNecklace";
-			internal const string WizardsNecklace = "ItemEquipmentNecklace07_WizardsNecklace";
-			internal const string HeroNecklace = "ItemEquipmentNecklace08_HeroNecklace";
-			internal const string HighPaladinNecklace = "ItemEquipmentNecklace09_HighPaladinNecklace";
-			internal const string HighWizardNecklace = "ItemEquipmentNecklace10_HighWizardNecklace";
 			internal const string DamageSpellNecklace = "ItemEquipmentNecklace11_DamageSpellNecklace";
 			internal const string BoostNecklace = "ItemEquipmentNecklace12_BoostNecklace";
-			internal const string DotNecklace = "ItemEquipmentNecklace13_DotNecklace";
-			internal const string BigArmorNecklace = "ItemEquipmentNecklace14_BigArmorNecklace";
-			internal const string DLC1Necklace01 = "ItemEquipmentNecklace15_DLC1Necklace01"; //Not sure if this is "Legendary Necklace" or "Company Property Necklace"
-			internal const string DLC1Necklace02 = "ItemEquipmentNecklace16_DLC1Necklace02"; //Not sure if this is "Legendary Necklace" or "Company Property Necklace"
 		}
 		
 		internal static class Rings
