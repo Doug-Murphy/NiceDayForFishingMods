@@ -126,7 +126,7 @@ internal static class Constants {
 			internal const string DrillHook = "ItemEquipmentHook02_DrillHook";
 			internal const string MagnetHook = "ItemEquipmentHook10_MagnetHook";
 			internal const string SimpleHook = "ItemEquipmentHook01_SimpleHook";
-			
+
 			//to be verified
 		}
 
@@ -138,7 +138,7 @@ internal static class Constants {
 			internal const string HolyGarlic = "HookAddonSuperHolyLight";
 			internal const string WeakLight = "HookAddonSimpleLight";
 			internal const string WiggleFin = "HookAddonWiggleFin";
-			
+
 			//to be verified
 		}
 
@@ -149,7 +149,7 @@ internal static class Constants {
 			internal const string HoneywoodLine = "ItemEquipmentReel02_BronzeReel";
 			internal const string ObsidianLine = "ItemEquipmentReel05_ObsidianReel";
 			internal const string RopeLine = "ItemEquipmentReel04_GoldReel";
-			
+
 			//to be verified
 		}
 
@@ -175,26 +175,28 @@ internal static class Constants {
 			internal const string DamageSpellNecklace = "ItemEquipmentNecklace11_DamageSpellNecklace";
 			internal const string BoostNecklace = "ItemEquipmentNecklace12_BoostNecklace";
 		}
-		
-		internal static class Rings
-		{
-			internal const string None = "ItemEquipmentJewelry00_None";
-			internal const string StrengthRing = "ItemEquipmentJewelry01_StrengthRing";
-			internal const string StaminaRing = "ItemEquipmentJewelry02_StaminaRing";
-			internal const string StaminaRegRing = "ItemEquipmentJewelry03_StaminaRegRing";
-			internal const string BigStaminaRing = "ItemEquipmentJewelry04_BigStaminaRing";
-			internal const string HealthRegRing = "ItemEquipmentJewelry05_HealthRegRing";
-			internal const string SuperStaminaRing = "ItemEquipmentJewelry06_SuperStaminaRing";
-			internal const string SuperStaminaRegRing = "ItemEquipmentJewelry07_SuperStaminaRegRing";
-			internal const string SuperHealthRegRing = "ItemEquipmentJewelry08_SuperHealthRegRing";
-			internal const string Boss1Ring = "ItemEquipmentJewelry09_Boss1Ring";
-			internal const string Boss2Ring = "ItemEquipmentJewelry10_Boss2Ring";
-			internal const string Boss3Ring = "ItemEquipmentJewelry11_Boss3Ring";
-			internal const string BigStaminaEgRing = "ItemEquipmentJewelry12_BigStaminaEgRing";
-			internal const string SmallHealthRegRing = "ItemEquipmentJewelry13_SmallHealthRegRing";
-			internal const string TraingRing = "ItemEquipmentJewelry14_TraingRing";
-			internal const string DLC1Ring01 = "ItemEquipmentJewelry15_DLC1Ring01"; //Not sure if this is "Legendary Ring" or "Ring of Dormor"
-			internal const string DLC1Ring02 = "ItemEquipmentJewelry16_DLC1Ring02"; //Not sure if this is "Legendary Ring" or "Ring of Dormor"
+
+		internal static class Rings {
+			//verified in-game names
+			internal const string DuelRing = "ItemEquipmentJewelery14_TraingRing";
+			internal const string LegendaryRing = "ItemEquipmentJewelery15_DLC1Ring01";
+			internal const string MagicalMoodRing = "ItemEquipmentJewelery13_SmallHealthRegRing";
+			internal const string RefreshingRing = "ItemEquipmentJewelery12_BigStaminaEgRing";
+			internal const string RingOfBiggerEndurance = "ItemEquipmentJewelery04_BigStaminaRing";
+			internal const string RingOfDormor = "ItemEquipmentJewelery16_DLC1Ring02";
+			internal const string RingOfEndurance = "ItemEquipmentJewelery02_StaminaRing";
+			internal const string RingOfFastRestoration = "ItemEquipmentJewelery07_SuperStaminaRegRing";
+			internal const string RingOfGreatRecovery = "ItemEquipmentJewelery08_SuperHealthRegRing";
+			internal const string RingOfRecovery = "ItemEquipmentJewelery05_HealthRegRing";
+			internal const string RingOfRestoration = "ItemEquipmentJewelery03_StaminaRegRing";
+			internal const string SpectralRing = "ItemEquipmentJewelery11_Boss3Ring";
+
+			//to be verified - maybe these don't actually exist in the game?
+			internal const string None = "ItemEquipmentJewelery00_None";
+			internal const string StrengthRing = "ItemEquipmentJewelery01_StrengthRing";
+			internal const string SuperStaminaRing = "ItemEquipmentJewelery06_SuperStaminaRing";
+			internal const string Boss1Ring = "ItemEquipmentJewelery09_Boss1Ring";
+			internal const string Boss2Ring = "ItemEquipmentJewelery10_Boss2Ring";
 		}
 		
 		internal static class Sails
