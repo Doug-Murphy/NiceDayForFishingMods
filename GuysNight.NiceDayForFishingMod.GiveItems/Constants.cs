@@ -14,7 +14,7 @@ internal static class Constants {
 			internal const string Fairy = "ItemBait06_Fairy";
 			internal const string Garlic = "ItemBait01_Garlic";
 			internal const string PalmNut = "ItemBait05_PalmNuts";
-			internal const string Worm = "ItemBait02_Worm";
+			internal const string WrigglingWorm = "ItemBait02_Worm";
 		}
 
 		internal static class BuildingMaterials {
