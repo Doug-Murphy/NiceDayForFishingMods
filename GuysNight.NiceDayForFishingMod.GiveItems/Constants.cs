@@ -153,4 +153,43 @@ internal static class Constants {
 			internal const string DLC1Sail04 = "ItemEquipmentSail17_DLC1Sail04"; //I think this is the rainbow mushroom one.
 		}
 	}
+	
+	
+	/*
+	 * Item Costs:
+	 * Undead Mines to Honeywood Portal -> 2 stone, 2 seashell, 1 obsidian
+	 * Honeywood to Undead Mines Portla -> 3 Rune stone, 2 raw crystal, 1 obsidian
+	 * Honeywood to Azerim Coast -> 3 drift wood, 2 iron ore, 1 ectoplasm
+	 * Azerim Coast to Honeywood -> 3 sand dollar, 2 fossil, 1 ectoplasm
+	 *
+	 * Gregs Item Shop:
+	 * Level 1 -> 50 gold, 1 drift wood, 1 stone, 1 sand dollar
+	 * Level 2 -> 200 gold, 1 drift wood, 1 stone, 1 iron ore, 2 fossil
+	 * Level 3 -> 1,500 gold, 2 stone, 1 slime, 2 seashell, 1 ectoplasm, 2 raw crystal, 1 obsidian, 1 soul gem
+
+	 * Bodgers Smithy:
+	 * Level 1 -> 50 gold, 1 drift wood, 1 sand dollar, 1 seashell
+	 * Level 2 -> 350 gold, 1 drift wood, 1 iron ore, 1 sand dollar, 2 raw crystal
+	 * Level 3 -> 2,000 gold, 2 drift wood, 1 slime, 2 sand dollar, 1 ectoplasm, 2 rune stone, 1 obisidian, 1 soul gem
+	 *
+	 * Freds Friendly Fish Forum
+	 * Level 1 -> 50 gold, 1 drift wood, 1 stone, 1 seashell
+	 * Level 2 -> 100 gold, 1 iron ore, 2 sand dollar, 1 seashell, 1 rune stone
+	 * Level 3 -> 200 gold, 1 slime, 2 sand dollar, 2 seashell, 1 ectoplasm, 2 raw crystal, 1 obsidian, 1 soul gem
+	 *
+	 * Willow's Royal Home
+	 * Level 1 -> 50 gold, 3 drift wood, 3 stone
+	 * Level 2 -> 250 gold, 1 iron ore, 1 sand dollar, 1 fossil, 2 rune stone
+	 * Level 3 -> 1,200 gold, 3 driftwood, 1 stone, 1 slime, 1 ectoplasm, 2 rune stone, 1 obsidian, 1 soul gem
+	 *
+	 * Eugene's Hat Emporium
+	 * Level 1 -> 50 gold, 1 stone, 1 sand dollar, 1 seashell
+	 * Level 2 -> 300 gold, 1 drift wood, 1 seashell, 1 fossil, 2 raw crystal
+	 * Level 3 -> 1,700 gold, 1 iron ore, 1 slime, 2 seashell, 1 ectoplasm, 3 rune stone, 1 obsidian, 1 soul gem
+	 *
+	 * Mayor's Manor
+	 * Level 1 -> 20 gold, 1 driftwood, 1 stone, 1 iron ore, 1 rune stone
+	 * Level 2 -> 100 gold, 1 iron ore, 1 fossil, 1 rune stone, 1 raw crystal, 1 obsidian
+	 * Level 3 -> 500 gold, 2 stone, 1 slime, 2 sand dollar, 1 fossil, 1 ectoplasm, 2 rune stone, 1 soul gem
+	 */
 }
