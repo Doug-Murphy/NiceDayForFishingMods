@@ -42,12 +42,12 @@ internal static class Constants {
 			internal const string CheeseWedge = "ItemConsumable06_StaminaFood";
 			internal const string HealthPotion = "ItemConsumable01_HealthPotion";
 			internal const string HealthyApple = "ItemConsumable07_HealthFood";
-			internal const string PeaceBloom = "ItemConsumable08_ImmuneFood"; 
+			internal const string PeaceBloom = "ItemConsumable08_ImmuneFood";
 			internal const string StaminaPotion = "ItemConsumable02_StaminaPotion";
-			internal const string StoneSkinPotion = "ItemConsumable04_DefensePotion";
-			internal const string StrengthPotion = "ItemConsumable03_StrenghtPotion"; //intentional typo in internal ID
+			internal const string StoneskinPotion = "ItemConsumable04_DefensePotion";
+			internal const string StrengthPotion = "ItemConsumable03_StrenghtPotion";
 			internal const string TalonMushroom = "ItemConsumable05_EffectRemoveFood";
-			
+
 			//to be verified
 		}
 		
