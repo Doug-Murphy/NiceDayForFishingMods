@@ -95,6 +95,15 @@ internal static class Constants {
 			internal const string DLC1Hat01 = "ItemEquipmentHat16_DLC1Hat01"; //Not sure if this is "Legendary Hat" or "Tinfoil Hat"
 			internal const string DLC1Hat02 = "ItemEquipmentHat17_DLC1Hat02"; //Not sure if this is "Legendary Hat" or "Tinfoil Hat"
 		}
+
+		internal static class Hooks {
+			//verified in-game names
+			internal const string DrillHook = "ItemEquipmentHook02_DrillHook";
+			internal const string MagnetHook = "ItemEquipmentHook10_MagnetHook";
+			internal const string SimpleHook = "ItemEquipmentHook01_SimpleHook";
+			
+			//to be verified
+		}
 		
 		internal static class Necklaces
 		{
