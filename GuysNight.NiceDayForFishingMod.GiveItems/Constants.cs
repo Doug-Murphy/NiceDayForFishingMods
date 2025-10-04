@@ -98,27 +98,29 @@ internal static class Constants {
 			internal const string DLCRod01 = "ItemEquipmentFishingRod20_DLCRod01"; //Not sure if this is "Legendary Rod" or "Overpriced Cosmetic Item" Rod
 			internal const string DLCRod02 = "ItemEquipmentFishingRod21_DLCRod02"; //Not sure if this is "Legendary Rod" or "Overpriced Cosmetic Item" Rod
 		}
-		
-		internal static class Hats
-		{
-			internal const string BaelinHat = "ItemEquipmentHat00_BaelinHat";
-			internal const string Hat01 = "ItemEquipmentHat01";
-			internal const string Hat02 = "ItemEquipmentHat02";
-			internal const string Hat03 = "ItemEquipmentHat03";
+
+		internal static class Hats {
+			//verified in-game names
+			internal const string BaelinsHat = "ItemEquipmentHat00_BaelinHat";
+			internal const string BlackFishingHat = "ItemEquipmentHat14";
+			internal const string BodgersBowler = "ItemEquipmentHat01";
+			internal const string CapOfTheWoods = "ItemEquipmentHat06";
+			internal const string DragonhornHelmet = "ItemEquipmentHat11";
+			internal const string GnomeHat = "ItemEquipmentHat15";
+			internal const string GrandmasBonnet = "ItemEquipmentHat03";
+			internal const string GuardHelmet = "ItemEquipmentHat05";
+			internal const string HolyHayHat = "ItemEquipmentHat12";
+			internal const string LegendaryHat = "ItemEquipmentHat16_DLC1Hat01";
+			internal const string MiningHelmet = "ItemEquipmentHat08";
+			internal const string OldPirateHat = "ItemEquipmentHat09";
+			internal const string SketchySquareTop = "ItemEquipmentHat07";
+			internal const string TinfoilHat = "ItemEquipmentHat17_DLC1Hat02";
+			internal const string WoodenBucket = "ItemEquipmentHat02";
+
+			//to be verified - maybe these don't exist?
 			internal const string Hat04 = "ItemEquipmentHat04";
-			internal const string Hat05 = "ItemEquipmentHat05";
-			internal const string Hat06 = "ItemEquipmentHat06";
-			internal const string Hat07 = "ItemEquipmentHat07";
-			internal const string Hat08 = "ItemEquipmentHat08";
-			internal const string Hat09 = "ItemEquipmentHat09";
 			internal const string Hat10 = "ItemEquipmentHat10";
-			internal const string Hat11 = "ItemEquipmentHat11";
-			internal const string Hat12 = "ItemEquipmentHat12";
 			internal const string Hat13 = "ItemEquipmentHat13";
-			internal const string Hat14 = "ItemEquipmentHat14";
-			internal const string Hat15 = "ItemEquipmentHat15";
-			internal const string DLC1Hat01 = "ItemEquipmentHat16_DLC1Hat01"; //Not sure if this is "Legendary Hat" or "Tinfoil Hat"
-			internal const string DLC1Hat02 = "ItemEquipmentHat17_DLC1Hat02"; //Not sure if this is "Legendary Hat" or "Tinfoil Hat"
 		}
 
 		internal static class Hooks {
