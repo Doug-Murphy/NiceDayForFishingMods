@@ -80,11 +80,14 @@ internal static class Constants {
 			internal const string BonecallersRod = "ItemEquipmentFishingRod16_ThurdothRod";
 			internal const string Crossrod = "ItemEquipmentFishingRod10_HolyRod";
 			internal const string EssentialRod = "ItemEquipmentFishingRod02_CommonRod";
+			internal const string ExGarlibur = "ItemEquipmentFishingRod14_GarlicSwordRod";
 			internal const string GoldenRod = "ItemEquipmentFishingRod09_GoldRod";
 			internal const string HackNSplash = "ItemEquipmentFishingRod17_StrongRod";
+			internal const string HighSorcerersRod = "ItemEquipmentFishingRod12_BaradunsRod";
 			internal const string KelpDigger = "ItemEquipmentFishingRod08_PickAxeRod";
 			internal const string KingfishSlayer = "ItemEquipmentFishingRod11_KingsRod";
 			internal const string NPCRod = "ItemEquipmentFishingRod01_TrainingRod";
+			internal const string OverpricedCosmeticItem = "ItemEquipmentFishingRod21_DLC1Rod02";
 			internal const string ProRod = "ItemEquipmentFishingRod04_ProfiRod";
 			internal const string SashimiMaster1000 = "ItemEquipmentFishingRod05_BladeRod";
 			internal const string SeaStaff = "ItemEquipmentFishingRod07_WizardRod";
@@ -93,10 +96,7 @@ internal static class Constants {
 			internal const string YorTolShum = "ItemEquipmentFishingRod15_DragonRod";
 			
 			//to be verified
-			internal const string BaradunsRod = "ItemEquipmentFishingRod12_BaradunsRod";
-			internal const string GarlicSwordRod = "ItemEquipmentFishingRod14_GarlicSwordRod";
-			internal const string DLCRod01 = "ItemEquipmentFishingRod20_DLCRod01"; //Not sure if this is "Legendary Rod" or "Overpriced Cosmetic Item" Rod
-			internal const string DLCRod02 = "ItemEquipmentFishingRod21_DLCRod02"; //Not sure if this is "Legendary Rod" or "Overpriced Cosmetic Item" Rod
+			internal const string DLCRod01 = "ItemEquipmentFishingRod20_DLCRod01"; //Surely this is "Legendary Rod"
 		}
 
 		internal static class Hats {
