@@ -1,6 +1,8 @@
 ﻿namespace GuysNight.NiceDayForFishingMod.GiveItems.Utilities;
 
 public static class ItemUtility {
+	//This is annoying and dumb, but downcasting from ItemBase to the specific item type doesn't work.
+	//I've even done pattern matching with `is` and `as`. Of course explicit casting won't work either.
 	public static bool ItemIsBait(string itemName) {
 		return itemName is
 			Constants.ItemNames.Bait.ArgonsMushroom or
