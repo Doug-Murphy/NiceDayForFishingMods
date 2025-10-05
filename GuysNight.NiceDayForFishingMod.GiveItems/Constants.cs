@@ -385,13 +385,13 @@ internal static class Constants {
 			internal const string LilShield = "ItemEquipmentNecklace04_ArmorNecklace";
 			internal const string MuscleCharm = "ItemEquipmentNecklace05_PowerNecklace";
 			internal const string NeckbandOfChanneling = "ItemEquipmentNecklace01_MinorDamageSpellNecklace";
+			internal const string OverdriveOpal = "ItemEquipmentNecklace12_BoostNecklace";
 			internal const string PaladinsInsignia = "ItemEquipmentNecklace06_PaladinNecklace";
 			internal const string SylwynPendant = "ItemEquipmentNecklace13_DotNecklace";
 			internal const string TankOfCorrosion = "ItemEquipmentNecklace14_BigArmorNecklace";
 
 			//to be verified - I think these actually don't exist in the game.
 			internal const string None = "ItemEquipmentNecklace00_None";
-			internal const string OverdriveOpal = "ItemEquipmentNecklace12_BoostNecklace";
 
 			internal static bool ItemIsNecklace(string itemName) {
 				return itemName is AmuletOfArno or
@@ -406,11 +406,11 @@ internal static class Constants {
 					LilShield or
 					MuscleCharm or
 					NeckbandOfChanneling or
+					OverdriveOpal or
 					PaladinsInsignia or
 					SylwynPendant or
 					TankOfCorrosion or
-					None or
-					OverdriveOpal;
+					None;
 			}
 		}
 
