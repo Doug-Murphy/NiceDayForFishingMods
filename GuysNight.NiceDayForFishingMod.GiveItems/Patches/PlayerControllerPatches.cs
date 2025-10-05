@@ -8,8 +8,6 @@ namespace GuysNight.NiceDayForFishingMod.GiveItems.Patches;
 [HarmonyPatch(typeof(PlayerController))]
 public class PlayerControllerPatches {
 	private static InventoryInfo _inventoryInfo;
-
-	private static bool _hasInitialized;
 	private static Keyboard _kb;
 
 	[HarmonyPatch("Update")]
@@ -23,69 +21,42 @@ public class PlayerControllerPatches {
 		}
 
 		if (_kb.f1Key.wasPressedThisFrame) {
-			SharedComponents.Logger.LogDebug("F1 pressed: Giving items.");
+			SharedComponents.Logger.LogDebug("F1 pressed: Attempting to give bait.");
 
 			if (_inventoryInfo?.ItemEntries == null) {
 				SharedComponents.Logger.LogWarning("ItemEntries is null.");
 				return;
 			}
 
-			SharedComponents.Logger.LogDebug($"Found {_inventoryInfo.ItemEntries.Count} items in inventory.");
-
 			foreach (var entry in _inventoryInfo.ItemEntries) {
-				SharedComponents.Logger.LogDebug($"Player has {_inventoryInfo.GetItemCount(entry.item)} of this item");
-
-				if (ItemUtility.ItemIsBait(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsBuildingMaterial(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsFish(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsFishingRod(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsHat(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsHook(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsHookAddon(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsLine(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsNecklace(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsRing(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else if (ItemUtility.ItemIsSail(entry.item.name)) {
-					CacheItem(entry.item);
-				}
-				else {
-					SharedComponents.Logger.LogDebug($"Item is of unknown type: {entry.item.name}");
-				}
-
-				// SharedComponents.Logger.LogDebug($"InternalItemName = {entry.item.name} and ItemName is {entry?.item.ItemName}");
-				// SharedComponents.Logger.LogDebug($"item.ItemDescription is {entry.item.ItemDescription}");
-				// SharedComponents.Logger.LogDebug($"item.ItemMoneyValue is {entry.item.ItemMoneyValue}");
-				// SharedComponents.Logger.LogDebug($"item.ItemName is {entry.item.ItemName}");
-				// SharedComponents.Logger.LogDebug($"item.ItemNameAlias is {entry.item.ItemNameAlias}");
-				// SharedComponents.Logger.LogDebug("".PadLeft(50, '-'));
+				CacheItem(entry.item);
 			}
 
-			_inventoryInfo.AddItem(SharedComponents.BaitByName[Constants.ItemNames.Bait.ArgonsMushroom], 100);
-			_inventoryInfo.AddItem(SharedComponents.BaitByName[Constants.ItemNames.Bait.BoBoBerry], 100);
-			_inventoryInfo.AddItem(SharedComponents.BaitByName[Constants.ItemNames.Bait.Fairy], 100);
-			_inventoryInfo.AddItem(SharedComponents.BaitByName[Constants.ItemNames.Bait.Garlic], 100);
-			_inventoryInfo.AddItem(SharedComponents.BaitByName[Constants.ItemNames.Bait.PalmNut], 100);
-			_inventoryInfo.AddItem(SharedComponents.BaitByName[Constants.ItemNames.Bait.WrigglingWorm], 100);
+			//We can only call AddItem() if we have an ItemBase reference, so we need to look them up from our cached dictionary.
+			//I do not see a way to create new ItemBase instances directly since this is using IL2CPP.
+			if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.ArgonsMushroom, out var argonsMushroom)) {
+				_inventoryInfo.AddItem(argonsMushroom, 100);
+			}
+
+			if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.BoBoBerry, out var boboBerry)) {
+				_inventoryInfo.AddItem(boboBerry, 100);
+			}
+
+			if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.Fairy, out var fairy)) {
+				_inventoryInfo.AddItem(fairy, 100);
+			}
+
+			if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.Garlic, out var garlic)) {
+				_inventoryInfo.AddItem(garlic, 100);
+			}
+
+			if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.PalmNut, out var palmNut)) {
+				_inventoryInfo.AddItem(palmNut, 100);
+			}
+
+			if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.WrigglingWorm, out var wrigglingWorm)) {
+				_inventoryInfo.AddItem(wrigglingWorm, 100);
+			}
 		}
 	}
 
@@ -164,8 +135,9 @@ public class PlayerControllerPatches {
 			}
 		}
 		else {
-			SharedComponents.Logger.LogDebug($"Item is of unknown type: {item.name}");
-			SharedComponents.Logger.LogDebug($"InternalItemName = {item.name} and ItemName is {item.ItemName}");
+			SharedComponents.Logger.LogWarning($"Item is of unknown type. Unable to cache it. item.name is {item.name}");
+			SharedComponents.Logger.LogDebug($"Player has '{_inventoryInfo.GetItemCount(item):N0}' of this item.");
+			SharedComponents.Logger.LogDebug($"item.name is '{item.name}' item.ItemName is '{item.ItemName}' item.ItemNameAlias is '{item.ItemNameAlias}' item.ItemDescription is '{item.ItemDescription}' item.ItemMoneyValue is '{item.ItemMoneyValue}'");
 		}
 	}
 }
