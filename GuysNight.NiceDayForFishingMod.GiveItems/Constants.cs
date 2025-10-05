@@ -280,7 +280,7 @@ internal static class Constants {
 			internal const string GuardHelmet = "ItemEquipmentHat05";
 			internal const string HolyHayHat = "ItemEquipmentHat12";
 			internal const string LegendaryHat = "ItemEquipmentHat16_DLC1Hat01";
-			//Mayor's Plume Hat
+			internal const string MayorsPlumeHat = "ItemEquipmentHat04";
 			internal const string MiningHelmet = "ItemEquipmentHat08";
 			internal const string ObviousWizardHat = "ItemEquipmentHat10";
 			internal const string OldPirateHat = "ItemEquipmentHat09";
@@ -289,7 +289,6 @@ internal static class Constants {
 			internal const string WoodenBucket = "ItemEquipmentHat02";
 
 			//to be verified - maybe these don't exist?
-			internal const string Hat04 = "ItemEquipmentHat04";
 			internal const string Hat10 = "ItemEquipmentHat10";
 			internal const string Hat13 = "ItemEquipmentHat13";
 
@@ -305,13 +304,13 @@ internal static class Constants {
 					GuardHelmet or
 					HolyHayHat or
 					LegendaryHat or
+					MayorsPlumeHat or
 					MiningHelmet or
 					ObviousWizardHat or
 					OldPirateHat or
 					SketchySquareTop or
 					TinfoilHat or
 					WoodenBucket or
-					Hat04 or
 					Hat10 or
 					Hat13;
 			}
