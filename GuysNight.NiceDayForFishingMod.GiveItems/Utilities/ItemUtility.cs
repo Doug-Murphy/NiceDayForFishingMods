@@ -118,6 +118,7 @@ public static class ItemUtility {
 			Constants.ItemNames.FishingRods.HighSorcerersRod or
 			Constants.ItemNames.FishingRods.KelpDigger or
 			Constants.ItemNames.FishingRods.KingfishSlayer or
+			Constants.ItemNames.FishingRods.LegendaryRod or
 			Constants.ItemNames.FishingRods.NPCRod or
 			Constants.ItemNames.FishingRods.OverpricedCosmeticItem or
 			Constants.ItemNames.FishingRods.ProRod or
@@ -125,8 +126,7 @@ public static class ItemUtility {
 			Constants.ItemNames.FishingRods.SeaStaff or
 			Constants.ItemNames.FishingRods.TheBuckler or
 			Constants.ItemNames.FishingRods.TheHeirloom or
-			Constants.ItemNames.FishingRods.YorTolShum or
-			Constants.ItemNames.FishingRods.DLCRod01;
+			Constants.ItemNames.FishingRods.YorTolShum;
 	}
 
 	public static bool ItemIsHat(string itemName) {
