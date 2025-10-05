@@ -1,4 +1,5 @@
 ﻿using FusionPlay.Inventory;
+using GuysNight.NiceDayForFishingMod.GiveItems.Utilities;
 using HarmonyLib;
 using UnityEngine.InputSystem;
 
@@ -34,37 +35,37 @@ public class PlayerControllerPatches {
 			foreach (var entry in _inventoryInfo.ItemEntries) {
 				SharedComponents.Logger.LogDebug($"Player has {_inventoryInfo.GetItemCount(entry.item)} of this item");
 
-				if (Constants.ItemNames.Bait.ItemIsBait(entry.item.name)) {
+				if (ItemUtility.ItemIsBait(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.BuildingMaterials.ItemIsBuildingMaterial(entry.item.name)) {
+				else if (ItemUtility.ItemIsBuildingMaterial(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.Fish.ItemIsFish(entry.item.name)) {
+				else if (ItemUtility.ItemIsFish(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.FishingRods.ItemIsFishingRod(entry.item.name)) {
+				else if (ItemUtility.ItemIsFishingRod(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.Hats.ItemIsHat(entry.item.name)) {
+				else if (ItemUtility.ItemIsHat(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.Hooks.ItemIsHook(entry.item.name)) {
+				else if (ItemUtility.ItemIsHook(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.HookAddons.ItemIsHookAddon(entry.item.name)) {
+				else if (ItemUtility.ItemIsHookAddon(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.Lines.ItemIsLine(entry.item.name)) {
+				else if (ItemUtility.ItemIsLine(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.Necklaces.ItemIsNecklace(entry.item.name)) {
+				else if (ItemUtility.ItemIsNecklace(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.Rings.ItemIsRing(entry.item.name)) {
+				else if (ItemUtility.ItemIsRing(entry.item.name)) {
 					CacheItem(entry.item);
 				}
-				else if (Constants.ItemNames.Sails.ItemIsSail(entry.item.name)) {
+				else if (ItemUtility.ItemIsSail(entry.item.name)) {
 					CacheItem(entry.item);
 				}
 				else {
@@ -102,62 +103,62 @@ public class PlayerControllerPatches {
 			SharedComponents.GoldItem = item;
 			SharedComponents.Logger.LogDebug($"Cached gold: {key}");
 		}
-		else if (Constants.ItemNames.Bait.ItemIsBait(item.name)) {
+		else if (ItemUtility.ItemIsBait(item.name)) {
 			if (SharedComponents.BaitByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached bait: {key}");
 			}
 		}
-		else if (Constants.ItemNames.BuildingMaterials.ItemIsBuildingMaterial(item.name)) {
+		else if (ItemUtility.ItemIsBuildingMaterial(item.name)) {
 			if (SharedComponents.BuildingMaterialsByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached building material: {key}");
 			}
 		}
-		else if (Constants.ItemNames.Consumables.ItemIsConsumable(item.name)) {
+		else if (ItemUtility.ItemIsConsumable(item.name)) {
 			if (SharedComponents.ConsumablesByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached consumable: {key}");
 			}
 		}
-		else if (Constants.ItemNames.Fish.ItemIsFish(item.name)) {
+		else if (ItemUtility.ItemIsFish(item.name)) {
 			if (SharedComponents.FishByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached fish: {key}");
 			}
 		}
-		else if (Constants.ItemNames.FishingRods.ItemIsFishingRod(item.name)) {
+		else if (ItemUtility.ItemIsFishingRod(item.name)) {
 			if (SharedComponents.FishingRodsByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached fishing rod: {key}");
 			}
 		}
-		else if (Constants.ItemNames.Hats.ItemIsHat(item.name)) {
+		else if (ItemUtility.ItemIsHat(item.name)) {
 			if (SharedComponents.HatsByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached hat: {key}");
 			}
 		}
-		else if (Constants.ItemNames.Hooks.ItemIsHook(item.name)) {
+		else if (ItemUtility.ItemIsHook(item.name)) {
 			if (SharedComponents.HooksByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached hook: {key}");
 			}
 		}
-		else if (Constants.ItemNames.HookAddons.ItemIsHookAddon(item.name)) {
+		else if (ItemUtility.ItemIsHookAddon(item.name)) {
 			if (SharedComponents.HookAddonsByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached hook addon: {key}");
 			}
 		}
-		else if (Constants.ItemNames.Lines.ItemIsLine(item.name)) {
+		else if (ItemUtility.ItemIsLine(item.name)) {
 			if (SharedComponents.LinesByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached line: {key}");
 			}
 		}
-		else if (Constants.ItemNames.Necklaces.ItemIsNecklace(item.name)) {
+		else if (ItemUtility.ItemIsNecklace(item.name)) {
 			if (SharedComponents.NecklacesByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached necklace: {key}");
 			}
 		}
-		else if (Constants.ItemNames.Rings.ItemIsRing(item.name)) {
+		else if (ItemUtility.ItemIsRing(item.name)) {
 			if (SharedComponents.RingsByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached ring: {key}");
 			}
 		}
-		else if (Constants.ItemNames.Sails.ItemIsSail(item.name)) {
+		else if (ItemUtility.ItemIsSail(item.name)) {
 			if (SharedComponents.SailsByName.TryAdd(key, item)) {
 				SharedComponents.Logger.LogDebug($"Cached sail: {key}");
 			}
