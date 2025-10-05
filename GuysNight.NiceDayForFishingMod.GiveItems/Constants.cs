@@ -50,27 +50,72 @@ internal static class Constants {
 
 			//to be verified
 		}
-		
-		internal static class FishingRods
-		{
-			internal const string TrainingRod = "ItemEquipmentFishingRod01_TrainingRod";
-			internal const string CommonRod = "ItemEquipmentFishingRod02_CommonRod";
-			internal const string ExpertRod = "ItemEquipmentFishingRod03_ExpertRod";
-			internal const string ProfiRod = "ItemEquipmentFishingRod04_ProfiRod";
-			internal const string BladeRod = "ItemEquipmentFishingRod05_BladeRod";
-			internal const string BruteRod = "ItemEquipmentFishingRod06_BruteRod";
-			internal const string WizardRod = "ItemEquipmentFishingRod07_WizardRod";
-			internal const string PickAxeRod = "ItemEquipmentFishingRod08_PickAxeRod";
-			internal const string GoldRod = "ItemEquipmentFishingRod09_GoldRod";
-			internal const string HolyRod = "ItemEquipmentFishingRod10_HolyRod";
-			internal const string KingsRod = "ItemEquipmentFishingRod11_KingsRod";
-			internal const string BaradunsRod = "ItemEquipmentFishingRod12_BaradunsRod";
-			internal const string BodgersHammerRod = "ItemEquipmentFishingRod13_BodgersHammerRod";
-			internal const string GarlicSwordRod = "ItemEquipmentFishingRod14_GarlicSwordRod";
-			internal const string DragonRod = "ItemEquipmentFishingRod15_DragonRod";
-			internal const string ThurdotRod = "ItemEquipmentFishingRod16_ThurdothRod";
-			internal const string StrongRod = "ItemEquipmentFishingRod17_StrongRod";
-			internal const string ShieldRod = "ItemEquipmentFishingRod18_ShieldRod";
+
+		internal static class Fish {
+			//verified in-game names
+			internal const string AmethystAngler = "ItemFish47";
+			internal const string AshenSnapper = "ItemFish51";
+			internal const string AzerimAnglerfish = "ItemFish32";
+			internal const string BasicBass = "ItemFish04_BasicBass";
+			internal const string BeheadedBarracuda = "ItemFish43";
+			internal const string BelCathShark = "ItemFish30";
+			internal const string BigMeatShieldFish = "ItemFish12_FatMeatShieldFish";
+			internal const string CodZombie = "ItemFish42";
+			internal const string CommonCarp = "ItemFish01_CommonCarp";
+			internal const string Corpsebiter = "ItemFish44";
+			internal const string DarkstoneTunnelHead = "ItemFish14_TunnelHead";
+			internal const string DarkwoodDaggertooth = "ItemFish15_DinoSnapper";
+			internal const string DarkwoodDigger = "ItemFish25";
+			internal const string DeepseaMauler = "ItemFish27";
+			internal const string DolderothDreadscale = "ItemFish36";
+			internal const string EastwatchEel = "ItemFish13_Eel";
+			internal const string ElderWoefish = "ItemFish58";
+			internal const string EmeraldEmperor = "ItemFish49";
+			internal const string FeatheredFlounder = "ItemFish20";
+			internal const string FyrefynFish = "ItemFish55";
+			internal const string GarOfGradockh = "ItemFish10_LongMouthBass";
+			internal const string GerdawnGrouper = "ItemFish03_HealthyRedFish";
+			internal const string GloomyLantern = "ItemFish59";
+			internal const string GoldfishOfRahul = "ItemFish46";
+			internal const string Grimtooth = "ItemFish39";
+			internal const string HoneywoodAnglerfish = "ItemFish11_AnglerFish";
+			internal const string HoneywoodHerring = "ItemFish05_SmallFish";
+			internal const string JollyJelly = "ItemFish31";
+			internal const string LavacoreCatfish = "ItemFish52";
+			internal const string LichfinEel = "ItemFish40";
+			internal const string MagicCarp = "ItemFish24";
+			internal const string MagmaMullet = "ItemFish53";
+			internal const string MilUisceMahiMahi = "ItemFish35";
+			internal const string Mimic = "ItemFish56";
+			internal const string MurgolianMorbideye = "ItemFish38";
+			internal const string NetherwindNeedlefish = "ItemFish28";
+			internal const string ObsidianOxEye = "ItemFish54";
+			internal const string Oyster = "ItemFish21_Oyster";
+			internal const string PickyPike = "ItemFish07_PickyPike";
+			internal const string PistolPerch = "ItemFish16";
+			internal const string RoseBrace = "ItemFish09_LongCarp";
+			internal const string RubyRonquil = "ItemFish50";
+			internal const string SapphireSalmon = "ItemFish48";
+			internal const string ShadeSkipper = "ItemFish60";
+			internal const string ShyShrimp = "ItemFish26";
+			internal const string Skeletuna = "ItemFish41";
+			internal const string Skullmaw = "ItemFish37";
+			internal const string Slimefish = "ItemFish19";
+			internal const string SlimySnail = "ItemFish18";
+			internal const string SnakeFish = "ItemFish02_SnakeFish";
+			internal const string SouthwindAnchovy = "ItemFish29";
+			internal const string SpectatorsGawker = "ItemFish57";
+			internal const string ThilivernTurbot = "ItemFish22";
+			internal const string TouletTuna = "ItemFish23";
+			internal const string Unicod = "ItemFish17";
+			internal const string VaerTorhanTrout = "ItemFish08_BlueFish";
+			internal const string ValgothVampireCrab = "ItemFish45";
+			internal const string VikendiCatfish = "ItemFish06_TigerCatfish";
+			internal const string WaveWhisperer = "ItemFish33";
+			internal const string WestEndCoveWolfFish = "ItemFish34";
+
+			//to be verified
+		}
 
 		internal static class FishingRods {
 			//verified in-game names
