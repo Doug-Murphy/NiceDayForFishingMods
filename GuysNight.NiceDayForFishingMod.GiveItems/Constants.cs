@@ -239,15 +239,13 @@ internal static class Constants {
 		internal static class Sails {
 			//verified in-game names
 			internal const string BasicSail = "ItemEquipmentSail01_VLDL";
-
 			//First Mate's Bedsheets
 			//Hermit's Home
 			//Hot Stuff
 			internal const string IconicSail = "ItemEquipmentSail14_DLC1Sail01";
-
 			//Jolly Bodger
-			//MCU Sail
-			//On THe Same Wave
+			internal const string MCUSail = "ItemEquipmentSail17_DLC1Sail04";
+			//On The Same Wave
 			//Panorama
 			//Patchwork Sail
 			internal const string ThatShitsDingoSail = "ItemEquipmentSail16_DLC1Sail03";
@@ -266,7 +264,6 @@ internal static class Constants {
 			internal const string Garlic = "ItemEquipmentSail11_Garlic";
 			internal const string Sail12 = "ItemEquipmentSail12";
 			internal const string Sail13 = "ItemEquipmentSail13";
-			internal const string DLC1Sail04 = "ItemEquipmentSail17_DLC1Sail04"; //I think this is MCU sail
 		}
 	}
 
