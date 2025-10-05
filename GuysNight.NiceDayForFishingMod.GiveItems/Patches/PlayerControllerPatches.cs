@@ -39,52 +39,49 @@ public class PlayerControllerPatches {
 			foreach (var entry in _inventory.ItemEntries) {
 				SharedComponents.Logger.LogDebug($"Player has {_inventoryInfo.GetItemCount(entry.item)} of this item");
 
-				switch (entry.item) {
-					case ItemFish itemAsFish:
-						break;
-					case ItemBait itemAsBait:
-						SharedComponents.Logger.LogDebug($"item type is {entry?.item.GetType()}");
-
-						CacheBait(itemAsBait);
-						break;
-					case ItemEquipmentBoots itemAsBoots:
-						break;
-					case ItemEquipmentFishingRod itemAsFishingRod:
-						// Handle fishing rod
-						break;
-					case ItemEquipmentHat itemAsHat:
-						// Handle hat
-						break;
-					case ItemEquipmentHook itemAsHook:
-						// Handle hook
-						break;
-					case ItemEquipmentHookAddOn itemAsHookAddOn:
-						// Handle hook add-on
-						break;
-					case ItemEquipmentJewelery itemAsJewelry:
-						// Handle jewelry
-						break;
-					case ItemEquipmentNecklace itemAsNecklace:
-						// Handle necklace
-						break;
-					case ItemEquipmentReel itemAsReel:
-						// Handle reel
-						break;
-					case ItemEquipmentSail itemAsSail:
-						// Handle sail
-						break;
-					case ItemEquipmentBase itemAsEquipment:
-						break;
-					default:
-						SharedComponents.Logger.LogDebug($"item is of base type");
-						break;
+				
+				if (Constants.ItemNames.Bait.ItemIsBait(entry.item.ItemName)) {
+					CacheBait((ItemBait)entry.item);
+				}
+				else if (Constants.ItemNames.BuildingMaterials.ItemIsBuildingMaterial(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.Fish.ItemIsFish(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.FishingRods.ItemIsFishingRod(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.Hats.ItemIsHat(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.Hooks.ItemIsHook(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.HookAddons.ItemIsHookAddon(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.Lines.ItemIsLine(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.Necklaces.ItemIsNecklace(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.Rings.ItemIsRing(entry.item.ItemName)) {
+					
+				}
+				else if (Constants.ItemNames.Sails.ItemIsSail(entry.item.ItemName)) {
+					
+				}
+				else {
+					SharedComponents.Logger.LogDebug($"Item is of unknown type: {entry.item.ItemName}");
 				}
 
-				SharedComponents.Logger.LogDebug($"item.name is {entry?.item.name}");
-				SharedComponents.Logger.LogDebug($"item.ItemDescription is {entry?.item.ItemDescription}");
-				SharedComponents.Logger.LogDebug($"item.ItemMoneyValue is {entry?.item.ItemMoneyValue}");
-				SharedComponents.Logger.LogDebug($"item.ItemName is {entry?.item.ItemName}");
-				SharedComponents.Logger.LogDebug($"item.ItemNameAlias is {entry?.item.ItemNameAlias}");
+				SharedComponents.Logger.LogDebug($"InternalItemName = {entry.item.name} and ItemName is {entry?.item.ItemName}");
+				// SharedComponents.Logger.LogDebug($"item.ItemDescription is {entry.item.ItemDescription}");
+				// SharedComponents.Logger.LogDebug($"item.ItemMoneyValue is {entry.item.ItemMoneyValue}");
+				// SharedComponents.Logger.LogDebug($"item.ItemName is {entry.item.ItemName}");
+				// SharedComponents.Logger.LogDebug($"item.ItemNameAlias is {entry.item.ItemNameAlias}");
 				SharedComponents.Logger.LogDebug("".PadLeft(50, '-'));
 			}
 		}
