@@ -228,12 +228,14 @@ internal static class Constants {
 
 		internal static class Rings {
 			//verified in-game names
+			internal const string DrakniteRing = "ItemEquipmentJewelery09_Boss1Ring";
 			internal const string DuelRing = "ItemEquipmentJewelery14_TraingRing";
 			internal const string LegendaryRing = "ItemEquipmentJewelery15_DLC1Ring01";
 			internal const string MagicalMoodRing = "ItemEquipmentJewelery13_SmallHealthRegRing";
 			internal const string RefreshingRing = "ItemEquipmentJewelery12_BigStaminaEgRing";
 			internal const string RingOfBiggerEndurance = "ItemEquipmentJewelery04_BigStaminaRing";
 			internal const string RingOfDormor = "ItemEquipmentJewelery16_DLC1Ring02";
+			internal const string RingOfEndlessEndurance = "ItemEquipmentJewelery06_SuperStaminaRing";
 			internal const string RingOfEndurance = "ItemEquipmentJewelery02_StaminaRing";
 			internal const string RingOfFastRestoration = "ItemEquipmentJewelery07_SuperStaminaRegRing";
 			internal const string RingOfGreatRecovery = "ItemEquipmentJewelery08_SuperHealthRegRing";
@@ -244,8 +246,6 @@ internal static class Constants {
 			//to be verified - maybe these don't actually exist in the game?
 			internal const string None = "ItemEquipmentJewelery00_None";
 			internal const string StrengthRing = "ItemEquipmentJewelery01_StrengthRing";
-			internal const string SuperStaminaRing = "ItemEquipmentJewelery06_SuperStaminaRing";
-			internal const string Boss1Ring = "ItemEquipmentJewelery09_Boss1Ring";
 			internal const string Boss2Ring = "ItemEquipmentJewelery10_Boss2Ring";
 		}
 
