@@ -12,7 +12,7 @@ public class PlayerControllerPatches {
 
 	[HarmonyPatch("Update")]
 	[HarmonyPostfix]
-	public static void Postfix(PlayerController __instance) {
+	public static void UpdatePostfix(PlayerController __instance) {
 		_inventoryInfo = __instance.GetComponent<InventoryInfo>();
 
 		_kb ??= Keyboard.current;
