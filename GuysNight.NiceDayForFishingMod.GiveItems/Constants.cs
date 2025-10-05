@@ -17,6 +17,16 @@ internal static class Constants {
 			internal const string Garlic = "ItemBait01_Garlic";
 			internal const string PalmNut = "ItemBait05_PalmNuts";
 			internal const string WrigglingWorm = "ItemBait02_Worm";
+
+			internal static bool ItemIsBait(string itemName) {
+				return itemName is
+					ArgonsMushroom or
+					BoBoBerry or
+					Fairy or
+					Garlic or
+					PalmNut or
+					WrigglingWorm;
+			}
 		}
 
 		internal static class BuildingMaterials {
@@ -35,6 +45,21 @@ internal static class Constants {
 			internal const string Stone = "ItemBuildingMaterial02";
 
 			//to be verified
+			internal static bool ItemIsBuildingMaterial(string itemName) {
+				return itemName is
+					DriftWood or
+					Ectoplasm or
+					Fossil or
+					IronOre or
+					Obsidian or
+					RawCrystal or
+					RuneStone or
+					SandDollar or
+					Seashell or
+					Slime or
+					SoulGem or
+					Stone;
+			}
 		}
 
 		internal static class Consumables {
@@ -49,6 +74,17 @@ internal static class Constants {
 			internal const string TalonMushroom = "ItemConsumable05_EffectRemoveFood";
 
 			//to be verified
+			internal static bool ItemIsConsumable(string itemName) {
+				return itemName is
+					CheeseWedge or
+					HealthPotion or
+					HealthyApple or
+					PeaceBloom or
+					StaminaPotion or
+					StoneskinPotion or
+					StrengthPotion or
+					TalonMushroom;
+			}
 		}
 
 		internal static class Fish {
@@ -115,6 +151,68 @@ internal static class Constants {
 			internal const string WestEndCoveWolfFish = "ItemFish34";
 
 			//to be verified
+			internal static bool ItemIsFish(string itemName) {
+				return itemName is AmethystAngler or
+					AshenSnapper or
+					AzerimAnglerfish or
+					BasicBass or
+					BeheadedBarracuda or
+					BelCathShark or
+					BigMeatShieldFish or
+					CodZombie or
+					CommonCarp or
+					Corpsebiter or
+					DarkstoneTunnelHead or
+					DarkwoodDaggertooth or
+					DarkwoodDigger or
+					DeepseaMauler or
+					DolderothDreadscale or
+					EastwatchEel or
+					ElderWoefish or
+					EmeraldEmperor or
+					FeatheredFlounder or
+					FyrefynFish or
+					GarOfGradockh or
+					GerdawnGrouper or
+					GloomyLantern or
+					GoldfishOfRahul or
+					Grimtooth or
+					HoneywoodAnglerfish or
+					HoneywoodHerring or
+					JollyJelly or
+					LavacoreCatfish or
+					LichfinEel or
+					MagicCarp or
+					MagmaMullet or
+					MilUisceMahiMahi or
+					Mimic or
+					MurgolianMorbideye or
+					NetherwindNeedlefish or
+					ObsidianOxEye or
+					Oyster or
+					PickyPike or
+					PistolPerch or
+					RoseBrace or
+					RubyRonquil or
+					SapphireSalmon or
+					ShadeSkipper or
+					ShyShrimp or
+					Skeletuna or
+					Skullmaw or
+					Slimefish or
+					SlimySnail or
+					SnakeFish or
+					SouthwindAnchovy or
+					SpectatorsGawker or
+					ThilivernTurbot or
+					TouletTuna or
+					Unicod or
+					VaerTorhanTrout or
+					ValgothVampireCrab or
+					VikendiCatfish or
+					WaveWhisperer or
+					WestEndCoveWolfFish;
+			}
 		}
 
 		internal static class FishingRods {
@@ -139,9 +237,34 @@ internal static class Constants {
 			internal const string TheBuckler = "ItemEquipmentFishingRod18_ShieldRod";
 			internal const string TheHeirloom = "ItemEquipmentFishingRod13_BodgersHammerRod";
 			internal const string YorTolShum = "ItemEquipmentFishingRod15_DragonRod";
-			
+
 			//to be verified
 			internal const string DLCRod01 = "ItemEquipmentFishingRod20_DLCRod01"; //Surely this is "Legendary Rod"
+
+			internal static bool ItemIsFishingRod(string itemName) {
+				return itemName is
+					AdvancedRod or
+					AncientRod or
+					BlackSmack or
+					BonecallersRod or
+					Crossrod or
+					EssentialRod or
+					ExGarlibur or
+					GoldenRod or
+					HackNSplash or
+					HighSorcerersRod or
+					KelpDigger or
+					KingfishSlayer or
+					NPCRod or
+					OverpricedCosmeticItem or
+					ProRod or
+					SashimiMaster1000 or
+					SeaStaff or
+					TheBuckler or
+					TheHeirloom or
+					YorTolShum or
+					DLCRod01;
+			}
 		}
 
 		internal static class Hats {
@@ -169,6 +292,29 @@ internal static class Constants {
 			internal const string Hat04 = "ItemEquipmentHat04";
 			internal const string Hat10 = "ItemEquipmentHat10";
 			internal const string Hat13 = "ItemEquipmentHat13";
+
+			internal static bool ItemIsHat(string itemName) {
+				return itemName is BaelinsHat or
+					BerserkCrown or
+					BlackFishingHat or
+					BodgersBowler or
+					CapOfTheWoods or
+					DragonhornHelmet or
+					GnomeHat or
+					GrandmasBonnet or
+					GuardHelmet or
+					HolyHayHat or
+					LegendaryHat or
+					MiningHelmet or
+					ObviousWizardHat or
+					OldPirateHat or
+					SketchySquareTop or
+					TinfoilHat or
+					WoodenBucket or
+					Hat04 or
+					Hat10 or
+					Hat13;
+			}
 		}
 
 		internal static class Hooks {
@@ -178,6 +324,12 @@ internal static class Constants {
 			internal const string SimpleHook = "ItemEquipmentHook01_SimpleHook";
 
 			//to be verified
+			internal static bool ItemIsHook(string itemName) {
+				return itemName is
+					DrillHook or
+					MagnetHook or
+					SimpleHook;
+			}
 		}
 
 		internal static class HookAddons {
@@ -190,6 +342,14 @@ internal static class Constants {
 			internal const string WiggleFin = "HookAddonWiggleFin";
 
 			//to be verified
+			internal static bool ItemIsHookAddon(string itemName) {
+				return itemName is AnglingBud2000 or
+					FishingPal5000 or
+					GlimmerGarlic or
+					HolyGarlic or
+					WeakLight or
+					WiggleFin;
+			}
 		}
 
 		internal static class Lines {
@@ -201,6 +361,14 @@ internal static class Constants {
 			internal const string RopeLine = "ItemEquipmentReel04_GoldReel";
 
 			//to be verified
+			internal static bool ItemIsLine(string itemName) {
+				return itemName is
+					AdventurerLine or
+					DiamondLine3000 or
+					HoneywoodLine or
+					ObsidianLine or
+					RopeLine;
+			}
 		}
 
 		internal static class Necklaces {
@@ -223,7 +391,27 @@ internal static class Constants {
 
 			//to be verified - I think these actually don't exist in the game.
 			internal const string None = "ItemEquipmentNecklace00_None";
-			internal const string BoostNecklace = "ItemEquipmentNecklace12_BoostNecklace"; //Overdrive Opal?
+			internal const string OverdriveOpal = "ItemEquipmentNecklace12_BoostNecklace";
+
+			internal static bool ItemIsNecklace(string itemName) {
+				return itemName is AmuletOfArno or
+					BaradunsSpareAmulet or
+					ClericCollar or
+					CompanyProperty or
+					DarkwoodJewel or
+					GildedAmuletOfRestitution or
+					IconicNecklace or
+					KalaborsEnchantment or
+					LegendaryNecklace or
+					LilShield or
+					MuscleCharm or
+					NeckbandOfChanneling or
+					PaladinsInsignia or
+					SylwynPendant or
+					TankOfCorrosion or
+					None or
+					OverdriveOpal;
+			}
 		}
 
 		internal static class Rings {
@@ -247,6 +435,27 @@ internal static class Constants {
 			internal const string None = "ItemEquipmentJewelery00_None";
 			internal const string StrengthRing = "ItemEquipmentJewelery01_StrengthRing";
 			internal const string Boss2Ring = "ItemEquipmentJewelery10_Boss2Ring";
+
+			internal static bool ItemIsRing(string itemName) {
+				return itemName is
+					DrakniteRing or
+					DuelRing or
+					LegendaryRing or
+					MagicalMoodRing or
+					RefreshingRing or
+					RingOfBiggerEndurance or
+					RingOfDormor or
+					RingOfEndlessEndurance or
+					RingOfEndurance or
+					RingOfFastRestoration or
+					RingOfGreatRecovery or
+					RingOfRecovery or
+					RingOfRestoration or
+					SpectralRing or
+					None or
+					StrengthRing or
+					Boss2Ring;
+			}
 		}
 
 		internal static class Sails {
@@ -270,6 +479,15 @@ internal static class Constants {
 			internal const string Sail12 = "ItemEquipmentSail12";
 			internal const string Sail13 = "ItemEquipmentSail13";
 			internal const string DLC1Sail04 = "ItemEquipmentSail17_DLC1Sail04"; //I think this is MCU sail
+
+			internal static bool ItemIsSail(string itemName) {
+				return itemName is
+					BasicSail or
+					IconicSail or
+					ThatShitsDingoSail or
+					WormsSail or
+					Stripes;
+			}
 		}
 	}
 
