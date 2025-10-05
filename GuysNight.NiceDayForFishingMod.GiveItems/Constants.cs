@@ -147,6 +147,7 @@ internal static class Constants {
 		internal static class Hats {
 			//verified in-game names
 			internal const string BaelinsHat = "ItemEquipmentHat00_BaelinHat";
+			internal const string BerserkCrown = "ItemEquipmentHat13";
 			internal const string BlackFishingHat = "ItemEquipmentHat14";
 			internal const string BodgersBowler = "ItemEquipmentHat01";
 			internal const string CapOfTheWoods = "ItemEquipmentHat06";
@@ -156,7 +157,9 @@ internal static class Constants {
 			internal const string GuardHelmet = "ItemEquipmentHat05";
 			internal const string HolyHayHat = "ItemEquipmentHat12";
 			internal const string LegendaryHat = "ItemEquipmentHat16_DLC1Hat01";
+			//Mayor's Plume Hat
 			internal const string MiningHelmet = "ItemEquipmentHat08";
+			internal const string ObviousWizardHat = "ItemEquipmentHat10";
 			internal const string OldPirateHat = "ItemEquipmentHat09";
 			internal const string SketchySquareTop = "ItemEquipmentHat07";
 			internal const string TinfoilHat = "ItemEquipmentHat17_DLC1Hat02";
