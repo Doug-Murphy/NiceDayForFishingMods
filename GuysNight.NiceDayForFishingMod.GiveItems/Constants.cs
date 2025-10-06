@@ -5,7 +5,6 @@ internal static class Constants {
 	internal const string ConfigKeyEnableMod = "EnableMod";
 
 	internal const string ConfigSectionHeaderKeybinds = "Keybinds";
-	internal const string ConfigKeyGiveHoneywoodItems = "Keybind for giving all building materials needed to fully level up Honeywood.";
 
 	internal static class ItemNames {
 		internal const string Gold = "ItemMoney";

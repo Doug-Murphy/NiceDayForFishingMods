@@ -3,7 +3,6 @@ using System.Reflection;
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
-using BepInEx.Unity.IL2CPP.UnityEngine;
 using HarmonyLib;
 
 namespace GuysNight.NiceDayForFishingMod.GiveItems;
@@ -22,13 +21,6 @@ public class Plugin : BasePlugin {
 			Constants.ConfigKeyEnableMod,
 			true,
 			"Whether or not to enable this mod. True for enabling the mod. False for disabling."
-		);
-
-		SharedComponents.ConfigFile.Bind(
-			Constants.ConfigSectionHeaderKeybinds,
-			Constants.ConfigKeyGiveHoneywoodItems,
-			KeyCode.F1,
-			"The key to press to receive all building materials needed to fully level up Honeywood."
 		);
 
 		SharedComponents.ConfigFile.Save();

@@ -20,7 +20,7 @@ internal static class SharedComponents {
 	internal static readonly Dictionary<string, ItemBase> NecklacesByName = new(StringComparer.OrdinalIgnoreCase);
 	internal static readonly Dictionary<string, ItemBase> RingsByName = new(StringComparer.OrdinalIgnoreCase);
 	internal static readonly Dictionary<string, ItemBase> SailsByName = new(StringComparer.OrdinalIgnoreCase);
-	
+
 	internal static ManualLogSource Logger { get; set; }
 
 	internal static ConfigFile ConfigFile { get; set; }
