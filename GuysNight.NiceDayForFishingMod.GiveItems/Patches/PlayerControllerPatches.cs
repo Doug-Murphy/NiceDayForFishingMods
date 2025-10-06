@@ -13,14 +13,30 @@ public class PlayerControllerPatches {
 	[HarmonyPatch("Update")]
 	[HarmonyPostfix]
 	public static void UpdatePostfix(PlayerController __instance) {
-		_inventoryInfo = __instance.GetComponent<InventoryInfo>();
-
+		_inventoryInfo ??= __instance.GetComponent<InventoryInfo>();
 		_kb ??= Keyboard.current;
+
 		if (_kb == null) {
 			return;
 		}
 
 		if (_kb.f1Key.wasPressedThisFrame) {
+			SharedComponents.ConfigFile.Reload();
+
+			var isModEnabled = true;
+
+			if (SharedComponents.ConfigFile.TryGetEntry<bool>(Constants.ConfigSectionHeaderToggles, Constants.ConfigKeyEnableMod, out var featureToggleConfigEntry)) {
+				isModEnabled = featureToggleConfigEntry.Value;
+				SharedComponents.Logger.LogDebug($"Successfully retrieved mod feature toggle. Value is '{isModEnabled}'");
+			}
+			else {
+				SharedComponents.Logger.LogWarning("Could not retrieve mod feature toggle from config. Assuming it was set to true.");
+			}
+
+			if (!isModEnabled) {
+				return;
+			}
+
 			SharedComponents.Logger.LogDebug("F1 pressed: Attempting to give bait.");
 
 			if (_inventoryInfo?.ItemEntries == null) {
