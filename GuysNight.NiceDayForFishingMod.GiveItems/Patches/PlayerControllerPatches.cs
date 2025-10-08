@@ -37,37 +37,58 @@ public class PlayerControllerPatches {
 
 			GivePlayerBait();
 		}
+		else if (_kb.f2Key.wasPressedThisFrame) {
+			if (!IsModEnabled()) {
+				SharedComponents.Logger.LogDebug("Mod is disabled in config. Not giving items.");
+				return;
+			}
+
+			SharedComponents.Logger.LogDebug("F2 pressed: Attempting to give building supplies.");
+
+			if (_inventoryInfo?.ItemEntries == null) {
+				SharedComponents.Logger.LogWarning("ItemEntries is null.");
+				return;
+			}
+
+			CacheItemReferences();
+
+			GivePlayerBuildingMaterials();
+		}
 	}
 
 	/// <summary>
 	/// Give the player some bait items.
+	/// If an ItemBase reference was not cached (player never had one), it will be skipped.
 	/// </summary>
 	private static void GivePlayerBait() {
-		//We can only call AddItem() if we have an ItemBase reference, so we need to look them up from our cached dictionary.
-		//I do not see a way to create new ItemBase instances directly since this is using IL2CPP.
-		if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.ArgonsMushroom, out var argonsMushroom)) {
-			_inventoryInfo.AddItem(argonsMushroom, 100);
-		}
+		GiveItemToPlayer(Constants.ItemNames.Bait.ArgonsMushroom, 100);
+		GiveItemToPlayer(Constants.ItemNames.Bait.BoBoBerry, 100);
+		GiveItemToPlayer(Constants.ItemNames.Bait.Fairy, 100);
+		GiveItemToPlayer(Constants.ItemNames.Bait.Garlic, 100);
+		GiveItemToPlayer(Constants.ItemNames.Bait.PalmNut, 100);
+		GiveItemToPlayer(Constants.ItemNames.Bait.WrigglingWorm, 100);
+	}
 
-		if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.BoBoBerry, out var boboBerry)) {
-			_inventoryInfo.AddItem(boboBerry, 100);
-		}
+	/// <summary>
+	/// Give the player enough building materials to build/upgrade every Honeywood building (all levels).
+	/// If an ItemBase reference was not cached (player never had one), it will be skipped.
+	/// </summary>
+	private static void GivePlayerBuildingMaterials() {
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.DriftWood, 15);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Ectoplasm, 6);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Fossil, 6);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.IronOre, 7);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Obsidian, 6);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.RawCrystal, 9);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.RuneStone, 14);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.SandDollar, 13);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Seashell, 11);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Slime, 6);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.SoulGem, 6);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Stone, 13);
 
-		if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.Fairy, out var fairy)) {
-			_inventoryInfo.AddItem(fairy, 100);
-		}
-
-		if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.Garlic, out var garlic)) {
-			_inventoryInfo.AddItem(garlic, 100);
-		}
-
-		if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.PalmNut, out var palmNut)) {
-			_inventoryInfo.AddItem(palmNut, 100);
-		}
-
-		if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.WrigglingWorm, out var wrigglingWorm)) {
-			_inventoryInfo.AddItem(wrigglingWorm, 100);
-		}
+		// Gold is needed too!
+		GiveItemToPlayer(Constants.ItemNames.Gold, 8_670);
 	}
 
 	/// <summary>
@@ -173,5 +194,21 @@ public class PlayerControllerPatches {
 		}
 
 		return isModEnabled;
+	}
+
+	private static void GiveItemToPlayer(string itemName, int amount) {
+		if (SharedComponents.BuildingMaterialsByName.TryGetValue(itemName, out var item)) {
+			_inventoryInfo.AddItem(item, amount);
+			SharedComponents.Logger.LogDebug($"Gave {amount} of building material '{itemName}'.");
+			return;
+		}
+
+		if (SharedComponents.BaitByName.TryGetValue(itemName, out item)) {
+			_inventoryInfo.AddItem(item, amount);
+			SharedComponents.Logger.LogDebug($"Gave {amount} of bait '{itemName}'.");
+			return;
+		}
+
+		SharedComponents.Logger.LogWarning($"Could not give item '{itemName}' because it was not cached in any supported dictionary.");
 	}
 }
