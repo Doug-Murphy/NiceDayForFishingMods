@@ -133,8 +133,6 @@ internal static class Constants {
 			internal const string TheBuckler = "ItemEquipmentFishingRod18_ShieldRod";
 			internal const string TheHeirloom = "ItemEquipmentFishingRod13_BodgersHammerRod";
 			internal const string YorTolShum = "ItemEquipmentFishingRod15_DragonRod";
-
-			//to be verified
 		}
 
 		internal static class Hats {
@@ -157,10 +155,6 @@ internal static class Constants {
 			internal const string SketchySquareTop = "ItemEquipmentHat07";
 			internal const string TinfoilHat = "ItemEquipmentHat17_DLC1Hat02";
 			internal const string WoodenBucket = "ItemEquipmentHat02";
-
-			//to be verified - maybe these don't exist?
-			internal const string Hat10 = "ItemEquipmentHat10";
-			internal const string Hat13 = "ItemEquipmentHat13";
 		}
 
 		internal static class Hooks {
@@ -207,9 +201,6 @@ internal static class Constants {
 			internal const string PaladinsInsignia = "ItemEquipmentNecklace06_PaladinNecklace";
 			internal const string SylwynPendant = "ItemEquipmentNecklace13_DotNecklace";
 			internal const string TankOfCorrosion = "ItemEquipmentNecklace14_BigArmorNecklace";
-
-			//to be verified - I think these actually don't exist in the game.
-			internal const string None = "ItemEquipmentNecklace00_None";
 		}
 
 		internal static class Rings {
@@ -226,13 +217,10 @@ internal static class Constants {
 			internal const string RingOfFastRestoration = "ItemEquipmentJewelery07_SuperStaminaRegRing";
 			internal const string RingOfGreatRecovery = "ItemEquipmentJewelery08_SuperHealthRegRing";
 			internal const string RingOfRecovery = "ItemEquipmentJewelery05_HealthRegRing";
+			internal const string RingOfRemembrance = "ItemEquipmentJewelery10_Boss2Ring";
 			internal const string RingOfRestoration = "ItemEquipmentJewelery03_StaminaRegRing";
+			internal const string RingOfStrength = "ItemEquipmentJewelery01_StrengthRing";
 			internal const string SpectralRing = "ItemEquipmentJewelery11_Boss3Ring";
-
-			//to be verified - maybe these don't actually exist in the game?
-			internal const string None = "ItemEquipmentJewelery00_None";
-			internal const string StrengthRing = "ItemEquipmentJewelery01_StrengthRing";
-			internal const string Boss2Ring = "ItemEquipmentJewelery10_Boss2Ring";
 		}
 
 		internal static class Sails {
@@ -265,7 +253,6 @@ internal static class Constants {
 			internal const string Sail13 = "ItemEquipmentSail13";
 		}
 	}
-
 
 	/*
 	 * Item Costs:

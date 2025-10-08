@@ -147,9 +147,7 @@ public static class ItemUtility {
 			Constants.ItemNames.Hats.OldPirateHat or
 			Constants.ItemNames.Hats.SketchySquareTop or
 			Constants.ItemNames.Hats.TinfoilHat or
-			Constants.ItemNames.Hats.WoodenBucket or
-			Constants.ItemNames.Hats.Hat10 or
-			Constants.ItemNames.Hats.Hat13;
+			Constants.ItemNames.Hats.WoodenBucket;
 	}
 
 	public static bool ItemIsHook(string itemName) {
@@ -193,8 +191,7 @@ public static class ItemUtility {
 			Constants.ItemNames.Necklaces.OverdriveOpal or
 			Constants.ItemNames.Necklaces.PaladinsInsignia or
 			Constants.ItemNames.Necklaces.SylwynPendant or
-			Constants.ItemNames.Necklaces.TankOfCorrosion or
-			Constants.ItemNames.Necklaces.None;
+			Constants.ItemNames.Necklaces.TankOfCorrosion;
 	}
 
 	public static bool ItemIsRing(string itemName) {
@@ -211,11 +208,10 @@ public static class ItemUtility {
 			Constants.ItemNames.Rings.RingOfFastRestoration or
 			Constants.ItemNames.Rings.RingOfGreatRecovery or
 			Constants.ItemNames.Rings.RingOfRecovery or
+			Constants.ItemNames.Rings.RingOfRemembrance or
 			Constants.ItemNames.Rings.RingOfRestoration or
-			Constants.ItemNames.Rings.SpectralRing or
-			Constants.ItemNames.Rings.None or
-			Constants.ItemNames.Rings.StrengthRing or
-			Constants.ItemNames.Rings.Boss2Ring;
+			Constants.ItemNames.Rings.RingOfStrength or
+			Constants.ItemNames.Rings.SpectralRing;
 	}
 
 	public static bool ItemIsSail(string itemName) {
