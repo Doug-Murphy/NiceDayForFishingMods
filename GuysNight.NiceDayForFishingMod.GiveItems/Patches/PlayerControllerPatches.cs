@@ -43,7 +43,7 @@ public class PlayerControllerPatches {
 				return;
 			}
 
-			SharedComponents.Logger.LogDebug("F2 pressed: Attempting to give building supplies.");
+			SharedComponents.Logger.LogDebug("F2 pressed: Attempting to give building supplies for Honeywood buildings.");
 
 			if (_inventoryInfo?.ItemEntries == null) {
 				SharedComponents.Logger.LogWarning("ItemEntries is null.");
@@ -53,6 +53,23 @@ public class PlayerControllerPatches {
 			CacheItemReferences();
 
 			GivePlayerBuildingMaterials();
+		}
+		else if (_kb.f3Key.wasPressedThisFrame) {
+			if (!IsModEnabled()) {
+				SharedComponents.Logger.LogDebug("Mod is disabled in config. Not giving items.");
+				return;
+			}
+
+			SharedComponents.Logger.LogDebug("F3 pressed: Attempting to give building supplies for portals.");
+
+			if (_inventoryInfo?.ItemEntries == null) {
+				SharedComponents.Logger.LogWarning("ItemEntries is null.");
+				return;
+			}
+
+			CacheItemReferences();
+
+			GivePlayerPortalMaterials();
 		}
 	}
 
@@ -89,6 +106,23 @@ public class PlayerControllerPatches {
 
 		// Gold is needed too!
 		GiveItemToPlayer(Constants.ItemNames.Gold, 8_670);
+	}
+
+	/// <summary>
+	/// Give the player the materials required to build all portals (both directions).
+	/// If an ItemBase reference was not cached (player never had one), it will be skipped.
+	/// </summary>
+	private static void GivePlayerPortalMaterials() {
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.DriftWood, 3);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Stone, 2);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Seashell, 2);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Obsidian, 2);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.RuneStone, 3);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.RawCrystal, 2);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.SandDollar, 3);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Fossil, 2);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.Ectoplasm, 2);
+		GiveItemToPlayer(Constants.ItemNames.BuildingMaterials.IronOre, 2);
 	}
 
 	/// <summary>
