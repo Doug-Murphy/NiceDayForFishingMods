@@ -21,6 +21,11 @@ public class PlayerControllerPatches {
 		}
 
 		if (_kb.f1Key.wasPressedThisFrame) {
+			if (!IsModEnabled()) {
+				SharedComponents.Logger.LogDebug("Mod is disabled in config. Not giving items.");
+				return;
+			}
+
 			SharedComponents.Logger.LogDebug("F1 pressed: Attempting to give bait.");
 
 			if (_inventoryInfo?.ItemEntries == null) {
@@ -38,22 +43,6 @@ public class PlayerControllerPatches {
 	/// Give the player some bait items.
 	/// </summary>
 	private static void GivePlayerBait() {
-		SharedComponents.ConfigFile.Reload();
-
-		var isModEnabled = true;
-
-		if (SharedComponents.ConfigFile.TryGetEntry<bool>(Constants.ConfigSectionHeaderToggles, Constants.ConfigKeyEnableMod, out var featureToggleConfigEntry)) {
-			isModEnabled = featureToggleConfigEntry.Value;
-			SharedComponents.Logger.LogDebug($"Successfully retrieved mod feature toggle. Value is '{isModEnabled}'");
-		}
-		else {
-			SharedComponents.Logger.LogWarning("Could not retrieve mod feature toggle from config. Assuming it was set to true.");
-		}
-
-		if (!isModEnabled) {
-			return;
-		}
-
 		//We can only call AddItem() if we have an ItemBase reference, so we need to look them up from our cached dictionary.
 		//I do not see a way to create new ItemBase instances directly since this is using IL2CPP.
 		if (SharedComponents.BaitByName.TryGetValue(Constants.ItemNames.Bait.ArgonsMushroom, out var argonsMushroom)) {
@@ -164,5 +153,25 @@ public class PlayerControllerPatches {
 				SharedComponents.Logger.LogDebug($"item.name is '{item.name}' item.ItemName is '{item.ItemName}' item.ItemNameAlias is '{item.ItemNameAlias}' item.ItemDescription is '{item.ItemDescription}' item.ItemMoneyValue is '{item.ItemMoneyValue}'");
 			}
 		}
+	}
+
+	/// <summary>
+	/// Check if the mod is enabled or not.
+	/// </summary>
+	/// <returns>True if the mod is enabled in the config file. Otherwise, false.</returns>
+	private static bool IsModEnabled() {
+		SharedComponents.ConfigFile.Reload();
+
+		var isModEnabled = true;
+
+		if (SharedComponents.ConfigFile.TryGetEntry<bool>(Constants.ConfigSectionHeaderToggles, Constants.ConfigKeyEnableMod, out var featureToggleConfigEntry)) {
+			isModEnabled = featureToggleConfigEntry.Value;
+			SharedComponents.Logger.LogDebug($"Successfully retrieved mod feature toggle. Value is '{isModEnabled}'");
+		}
+		else {
+			SharedComponents.Logger.LogWarning("Could not retrieve mod feature toggle from config. Assuming it was set to true.");
+		}
+
+		return isModEnabled;
 	}
 }
